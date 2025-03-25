@@ -1,4 +1,8 @@
-# Environment
+# BabyLM 2024 Multimodal Training Pipeline
+
+This repository contains code for training Flamingo and GIT models, following the procedures used to train the 2024 BabyLM multimodal baselines. Note that the code and README in this repository were written almost entirely by Chengxu Zhuang.
+
+## Environment
 
 Python 3.9, transformer package in huggingface, and datasets package in huggingface.
 
@@ -6,15 +10,15 @@ And also install: https://github.com/chengxuz/pt_framework
 
 Install the current repo using `pip install .` or `pip install -e .`.
 
-## Where to put data
+### Where to put data
 
 First, define the environment variable `BABYLM_ROOT_DIR` to be where your models and data will live.
 The downloaded data should be put at `${BABYLM_ROOT_DIR}/datasets/` so that this folder contains the following four subfolders: `babylm_100M`, `babylm_10M`, `babylm_dev`, and `babylm_test`.
 The trained models will be put at `${BABYLM_ROOT_DIR}/models/` and the records will be put at `${BABYLM_ROOT_DIR}/model_recs/`.
 
-# Training Command for 2024 Visual-text Baselines
+## Training Command for 2024 Visual-text Baselines
 
-## Folder structure for training from raw images
+### Folder structure for training from raw images
 
 Specify the environment variable `BABYLM_DATASET_ROOT_DIR` to be where the visual datasets are stored.
 
@@ -49,7 +53,7 @@ ls ${BABYLM_DATASET_ROOT_DIR}/babylm_vis_text_2024
 bnc_spoken.train  childes.train  gutenberg.train  open_subtitles.train  simple_wiki.train  switchboard.train
 ```
 
-## GIT and Flamingo models
+### GIT and Flamingo models
 
 The Flamingo training:
 ```
